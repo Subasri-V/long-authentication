@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+import "proto/user.proto";
+
+option go_package="https://github.com/Subasri-V/long-authentication.git";
+
+service UserService {
+    rpc GetMe(GetMeRequest) returns (UserResponse){}
+}
+
+message GetMeRequest {
+    string Id =1;
+}
